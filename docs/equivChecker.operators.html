@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href="resources/coqdoc.css" rel="stylesheet" type="text/css" />
+<link href="resources/coqdocjs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resources/config.js"></script>
+<script type="text/javascript" src="resources/coqdocjs.js"></script>
+</head>
+
+<body onload="document.getElementById('content').focus()">
+  <div id="header">
+    <span class="left">
+      <span class="modulename"> <script> document.write(document.title) </script> </span>
+    </span>
+
+    <span class="button" id="toggle-proofs"></span>
+
+    <span class="right">
+      <a href="../">Project Page</a>
+      <a href="./indexpage.html"> Index </a>
+      <a href="./toc.html"> Table of Contents </a>
+    </span>
+</div>
+    <div id="content" tabindex="-1" onblur="document.getElementById('content').focus()">
+    <div id="main">
+<h1 class="libtitle">equivChecker.operators</h1>
+
+<div class="code">
+<span class="id" title="keyword">Declare Scope</span> <span class="id" title="var">ops</span>.<br/>
+<span class="id" title="keyword">Delimit</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ops</span> <span class="id" title="keyword">with</span> <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="InOp" class="idref" href="#InOp"><span class="id" title="record">InOp</span></a> (<a id="x:1" class="idref" href="#x:1"><span class="id" title="binder">x</span></a> <a id="X:2" class="idref" href="#X:2"><span class="id" title="binder">X</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="in_op_" class="idref" href="#in_op_"><span class="id" title="projection">in_op_</span></a> : <a class="idref" href="equivChecker.operators.html#x:1"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#X:2"><span class="id" title="variable">X</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <span class="id" title="keyword">Prop</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="6a8e7b6a475577a73d6ef6e4b6cc2545" class="idref" href="#6a8e7b6a475577a73d6ef6e4b6cc2545"><span class="id" title="notation">&quot;</span></a>x ∈ X" := (<a class="idref" href="equivChecker.operators.html#in_op_"><span class="id" title="definition">in_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">X</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 39) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="CupOp" class="idref" href="#CupOp"><span class="id" title="record">CupOp</span></a> (<a id="A:5" class="idref" href="#A:5"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="cup_op_" class="idref" href="#cup_op_"><span class="id" title="projection">cup_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:5"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:5"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:5"><span class="id" title="variable">A</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="bc40f28cf49ea2277d459732e01dd3c2" class="idref" href="#bc40f28cf49ea2277d459732e01dd3c2"><span class="id" title="notation">&quot;</span></a>x ∪ y" := (<a class="idref" href="equivChecker.operators.html#cup_op_"><span class="id" title="definition">cup_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 40) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="CapOp" class="idref" href="#CapOp"><span class="id" title="record">CapOp</span></a> (<a id="A:8" class="idref" href="#A:8"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="cap_op_" class="idref" href="#cap_op_"><span class="id" title="projection">cap_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:8"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:8"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:8"><span class="id" title="variable">A</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="ce349f6da45dd2025f125f7ec47dce32" class="idref" href="#ce349f6da45dd2025f125f7ec47dce32"><span class="id" title="notation">&quot;</span></a>x ∩ y" := (<a class="idref" href="equivChecker.operators.html#cap_op_"><span class="id" title="definition">cap_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 40) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="SubsetOp" class="idref" href="#SubsetOp"><span class="id" title="record">SubsetOp</span></a> (<a id="A:11" class="idref" href="#A:11"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="subset_op_" class="idref" href="#subset_op_"><span class="id" title="projection">subset_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:11"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:11"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <span class="id" title="keyword">Prop</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="50a8e660c5693ce6016d948198f37d3c" class="idref" href="#50a8e660c5693ce6016d948198f37d3c"><span class="id" title="notation">&quot;</span></a>x ⊂ y" := (<a class="idref" href="equivChecker.operators.html#subset_op_"><span class="id" title="definition">subset_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 39).<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="SubseteqOp" class="idref" href="#SubseteqOp"><span class="id" title="record">SubseteqOp</span></a> (<a id="A:14" class="idref" href="#A:14"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="subseteq_op_" class="idref" href="#subseteq_op_"><span class="id" title="projection">subseteq_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:14"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:14"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <span class="id" title="keyword">Prop</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="db79eb3062cfc9024d8dda07dffe69e9" class="idref" href="#db79eb3062cfc9024d8dda07dffe69e9"><span class="id" title="notation">&quot;</span></a>x ⊆ y" := (<a class="idref" href="equivChecker.operators.html#subseteq_op_"><span class="id" title="definition">subseteq_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 39).<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="StepOp" class="idref" href="#StepOp"><span class="id" title="record">StepOp</span></a> (<a id="A:17" class="idref" href="#A:17"><span class="id" title="binder">A</span></a> <a id="B:18" class="idref" href="#B:18"><span class="id" title="binder">B</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="step_op_" class="idref" href="#step_op_"><span class="id" title="projection">step_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:17"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:18"><span class="id" title="variable">B</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:18"><span class="id" title="variable">B</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <span class="id" title="keyword">Prop</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="a7e766f31dc6318c34e70c41b735ddda" class="idref" href="#a7e766f31dc6318c34e70c41b735ddda"><span class="id" title="notation">&quot;</span></a>x $ y --&gt; z" := (<a class="idref" href="equivChecker.operators.html#step_op_"><span class="id" title="definition">step_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 39) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="StepsOp" class="idref" href="#StepsOp"><span class="id" title="record">StepsOp</span></a> (<a id="A:21" class="idref" href="#A:21"><span class="id" title="binder">A</span></a> <a id="B:22" class="idref" href="#B:22"><span class="id" title="binder">B</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="steps_op_" class="idref" href="#steps_op_"><span class="id" title="projection">steps_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:21"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:22"><span class="id" title="variable">B</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:22"><span class="id" title="variable">B</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <span class="id" title="keyword">Prop</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="b31ac831a965eaab8e3e6e5621e1e53c" class="idref" href="#b31ac831a965eaab8e3e6e5621e1e53c"><span class="id" title="notation">&quot;</span></a>x $ y -&gt;* z" := (<a class="idref" href="equivChecker.operators.html#steps_op_"><span class="id" title="definition">steps_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 39) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="LstepOp" class="idref" href="#LstepOp"><span class="id" title="record">LstepOp</span></a> (<a id="A:25" class="idref" href="#A:25"><span class="id" title="binder">A</span></a> <a id="B:26" class="idref" href="#B:26"><span class="id" title="binder">B</span></a> <a id="C:27" class="idref" href="#C:27"><span class="id" title="binder">C</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="lstep_op_" class="idref" href="#lstep_op_"><span class="id" title="projection">lstep_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:25"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:26"><span class="id" title="variable">B</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#C:27"><span class="id" title="variable">C</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:26"><span class="id" title="variable">B</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <span class="id" title="keyword">Prop</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="1a779b32bb4e987527f2e3a8babb0f2e" class="idref" href="#1a779b32bb4e987527f2e3a8babb0f2e"><span class="id" title="notation">&quot;</span></a>w $ x -[ y ]-&gt; z" := (<a class="idref" href="equivChecker.operators.html#lstep_op_"><span class="id" title="definition">lstep_op_</span></a> <span class="id" title="var">w</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 39) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="LstepsOp" class="idref" href="#LstepsOp"><span class="id" title="record">LstepsOp</span></a> (<a id="A:30" class="idref" href="#A:30"><span class="id" title="binder">A</span></a> <a id="B:31" class="idref" href="#B:31"><span class="id" title="binder">B</span></a> <a id="C:32" class="idref" href="#C:32"><span class="id" title="binder">C</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="lsteps_op_" class="idref" href="#lsteps_op_"><span class="id" title="projection">lsteps_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:30"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:31"><span class="id" title="variable">B</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#C:32"><span class="id" title="variable">C</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:31"><span class="id" title="variable">B</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <span class="id" title="keyword">Prop</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="6d47d24aed4f55e1d29f449652cc347e" class="idref" href="#6d47d24aed4f55e1d29f449652cc347e"><span class="id" title="notation">&quot;</span></a>w $ x -[ y ]-&gt;* z" := (<a class="idref" href="equivChecker.operators.html#lsteps_op_"><span class="id" title="definition">lsteps_op_</span></a> <span class="id" title="var">w</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 39) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="NthOp" class="idref" href="#NthOp"><span class="id" title="record">NthOp</span></a> (<a id="A:35" class="idref" href="#A:35"><span class="id" title="binder">A</span></a> <a id="B:36" class="idref" href="#B:36"><span class="id" title="binder">B</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="nth_op_" class="idref" href="#nth_op_"><span class="id" title="projection">nth_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:35"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:36"><span class="id" title="variable">B</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="0bba7027dddb7ffbfdef3a321f896dcf" class="idref" href="#0bba7027dddb7ffbfdef3a321f896dcf"><span class="id" title="notation">&quot;</span></a>x ⟨ i ⟩" := (<a class="idref" href="equivChecker.operators.html#nth_op_"><span class="id" title="definition">nth_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">i</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 40) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="ShiftOp" class="idref" href="#ShiftOp"><span class="id" title="record">ShiftOp</span></a> (<a id="A:39" class="idref" href="#A:39"><span class="id" title="binder">A</span></a> <a id="B:40" class="idref" href="#B:40"><span class="id" title="binder">B</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="shift_op_" class="idref" href="#shift_op_"><span class="id" title="projection">shift_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:39"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:39"><span class="id" title="variable">A</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="666c02a9460617d6451f2744def56259" class="idref" href="#666c02a9460617d6451f2744def56259"><span class="id" title="notation">&quot;</span></a>x '⟨' i '+⟩'" := (<a class="idref" href="equivChecker.operators.html#shift_op_"><span class="id" title="definition">shift_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">i</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 40) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="RangeOp" class="idref" href="#RangeOp"><span class="id" title="record">RangeOp</span></a> (<a id="A:43" class="idref" href="#A:43"><span class="id" title="binder">A</span></a> <a id="B:44" class="idref" href="#B:44"><span class="id" title="binder">B</span></a> <a id="C:45" class="idref" href="#C:45"><span class="id" title="binder">C</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="range_op_" class="idref" href="#range_op_"><span class="id" title="projection">range_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:43"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#C:45"><span class="id" title="variable">C</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a id="c2ffdabf82c1314e243f2f0bd451f8c7" class="idref" href="#c2ffdabf82c1314e243f2f0bd451f8c7"><span class="id" title="notation">&quot;</span></a>x '⟨' i … j '⟩'" := (<a class="idref" href="equivChecker.operators.html#range_op_"><span class="id" title="definition">range_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">i</span> <span class="id" title="var">j</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 40) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Reserved Notation</span> &quot;x ⋅ y" (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 50, <span class="id" title="tactic">left</span> <span class="id" title="keyword">associativity</span>).<br/>
+<span class="id" title="keyword">Reserved Notation</span> &quot;x • y" (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 50, <span class="id" title="tactic">left</span> <span class="id" title="keyword">associativity</span>).<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="DotOp1" class="idref" href="#DotOp1"><span class="id" title="record">DotOp1</span></a> (<a id="A:48" class="idref" href="#A:48"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="dot_op1_" class="idref" href="#dot_op1_"><span class="id" title="projection">dot_op1_</span></a> : <a class="idref" href="equivChecker.operators.html#A:48"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:48"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:48"><span class="id" title="variable">A</span></a>.<br/>
+<span class="id" title="keyword">Notation</span> <a id="0cd61c4f894c27d5e8f6d19a60436754" class="idref" href="#0cd61c4f894c27d5e8f6d19a60436754"><span class="id" title="notation">&quot;</span></a>x ⋅ y" := (<a class="idref" href="equivChecker.operators.html#dot_op1_"><span class="id" title="definition">dot_op1_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 50, <span class="id" title="tactic">left</span> <span class="id" title="keyword">associativity</span>) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="DotOp2" class="idref" href="#DotOp2"><span class="id" title="record">DotOp2</span></a> (<a id="A:51" class="idref" href="#A:51"><span class="id" title="binder">A</span></a> <a id="B:52" class="idref" href="#B:52"><span class="id" title="binder">B</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="dot_op2_" class="idref" href="#dot_op2_"><span class="id" title="projection">dot_op2_</span></a> : <a class="idref" href="equivChecker.operators.html#A:51"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:52"><span class="id" title="variable">B</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#B:52"><span class="id" title="variable">B</span></a>.<br/>
+<span class="id" title="keyword">Notation</span> <a id="fb11b8475e79dc028a201b1093798790" class="idref" href="#fb11b8475e79dc028a201b1093798790"><span class="id" title="notation">&quot;</span></a>x • y" := (<a class="idref" href="equivChecker.operators.html#dot_op2_"><span class="id" title="definition">dot_op2_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span>) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Class</span> <a id="AddOp" class="idref" href="#AddOp"><span class="id" title="record">AddOp</span></a> (<a id="A:55" class="idref" href="#A:55"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a id="add_op_" class="idref" href="#add_op_"><span class="id" title="projection">add_op_</span></a> : <a class="idref" href="equivChecker.operators.html#A:55"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:55"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.17.1/stdlib//Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">-&gt;</span></a> <a class="idref" href="equivChecker.operators.html#A:55"><span class="id" title="variable">A</span></a>.<br/>
+<span class="id" title="keyword">Notation</span> <a id="f06d29102fd4259a464dadd2ed7f0e95" class="idref" href="#f06d29102fd4259a464dadd2ed7f0e95"><span class="id" title="notation">&quot;</span></a>x + y" := (<a class="idref" href="equivChecker.operators.html#add_op_"><span class="id" title="definition">add_op_</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span>) : <span class="id" title="var">ops</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ops</span>.<br/>
+</div>
+</div>
+<div id="footer">
+  Generated by <a href="http://coq.inria.fr/">coqdoc</a> and improved with <a href="https://github.com/tebbi/coqdocjs">CoqdocJS</a>
+</div>
+</div>
+</body>
+
+</html>
