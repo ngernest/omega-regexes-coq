@@ -1,0 +1,17 @@
+-R theories/ equivChecker
+
+theories/utils.v
+theories/operators.v
+theories/pset.v
+
+theories/syntax.v
+theories/words.v
+theories/semantics.v
+theories/derivatives.v
+theories/equiv_algo.v
+theories/expr_deriv.v
+theories/opt_algo.v
+theories/bounded_checker.v
+theories/wrapper.v
+
+extraction/extract.v
