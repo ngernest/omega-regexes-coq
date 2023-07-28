@@ -432,7 +432,7 @@ let rec observe dEC f s =
 type 'a res_opt =
 | EQUAL
 | NOT_EQUAL of 'a
-| DONT_KNOW of 'a
+| UNKNOWN of 'a
 
 (** val find_res : 'a1 algo_option coword -> nat -> 'a1 res_opt **)
 
@@ -442,7 +442,7 @@ let rec find_res w n =
    | FINISHED -> EQUAL
    | CLASH l -> NOT_EQUAL l
    | CONTINUE l -> (match n with
-                    | O -> DONT_KNOW l
+                    | O -> UNKNOWN l
                     | S n' -> find_res w' n'))
 
 (** val bounded_check :

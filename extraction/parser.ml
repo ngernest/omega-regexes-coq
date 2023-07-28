@@ -1,7 +1,7 @@
-open Deriv
+open EquivChecker
 
 type token = SYM of int | EPS | LP | RP | SUM | CAT | STAR | OMEGA 
-type exp = Sym of int | Epsilon | Sum of exp * exp | Cat of exp * exp | Star of exp | Omega of exp 
+type exp = Sym of nat | Epsilon | Sum of exp * exp | Cat of exp * exp | Star of exp | Omega of exp 
 exception Error of string
 
 let isDigit d = match d with
@@ -9,6 +9,10 @@ let isDigit d = match d with
   | _ -> false
 let num c = Char.code c - Char.code '0'
 let explode s = List.init (String.length s) (String.get s)
+
+let rec to_nat x = match x with 
+  | 0 -> O 
+  | n -> S (to_nat (n-1))
 
 let rec lex s = match s with 
   | [] -> []
@@ -43,19 +47,19 @@ and sexp tl = match tl with
       | _ -> raise (Error "omega" ))
   | _ -> pexp tl 
 and pexp tl = match tl with 
-  | SYM x::tl' -> (Sym x, tl')
+  | SYM x::tl' -> (Sym (to_nat (x)), tl')
   | EPS::tl' -> (Epsilon, tl')
   | LP::l -> (match cexp l with 
       | (e, RP::tl') -> (e, tl')
       | _ -> raise (Error "parantheses"))
   | _ -> raise (Error "parse")
 
-let rec parse tl = let (e,t) = cexp tl in 
+let parse tl = let (e,t) = cexp tl in 
   if t = [] then e else raise (Error "parse")
         
 let rec parse_reg e = match e with 
         | Sym x -> Echar x 
-        | Epsilon -> One 
+        | Epsilon -> Eone 
         | Sum(a,b) -> Esum(parse_reg a, parse_reg b)
         | Cat(a,b) -> Ecat(parse_reg a, parse_reg b)
         | Star(a) -> Estar(parse_reg a)

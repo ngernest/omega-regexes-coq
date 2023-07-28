@@ -11,17 +11,17 @@ Import ListNotations.
 Inductive res_opt (A : Type) : Type := 
   | EQUAL : res_opt A
   | NOT_EQUAL : A -> res_opt A 
-  | DONT_KNOW : A -> res_opt A.
+  | UNKNOWN : A -> res_opt A.
 Arguments EQUAL {_}.
 Arguments NOT_EQUAL {_}.
-Arguments DONT_KNOW {_}.
+Arguments UNKNOWN {_}.
 
 Fixpoint find_res {A} (w : coword (algo_option A)) (n : nat) : res_opt A :=
   match w with 
   | FINISHED :? _ => EQUAL
   | CLASH l :? _ => NOT_EQUAL l 
   | CONTINUE l :? w' => match n with 
-                        | 0 => DONT_KNOW l 
+                        | 0 => UNKNOWN l 
                         | S n' => find_res w' n'
                         end 
   end.

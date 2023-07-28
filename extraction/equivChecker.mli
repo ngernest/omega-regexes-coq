@@ -153,7 +153,7 @@ val observe :
 type 'a res_opt =
 | EQUAL
 | NOT_EQUAL of 'a
-| DONT_KNOW of 'a
+| UNKNOWN of 'a
 
 val find_res : 'a1 algo_option coword -> nat -> 'a1 res_opt
 

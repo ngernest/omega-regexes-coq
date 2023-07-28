@@ -4,5 +4,5 @@ From equivChecker Require Import wrapper.
 (** * Extraction as Executable OCaml Program *)
 
 Cd "./extraction".
-Extraction "deriv.ml" check.
+Extraction "equivChecker.ml" check.
 Cd "../".

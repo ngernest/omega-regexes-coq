@@ -19,6 +19,7 @@ COQDOCJS_LN ?= false
 
 coqdoc: $(COQMAKEFILE)
 	$(MAKE) -f $^ html
+	rm -r docs
 	cp -r html docs
 ifeq ($(COQDOCJS_LN),true)
 	ln -sf ../$(EXTRA_DIR)/resources docs

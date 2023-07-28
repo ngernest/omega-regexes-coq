@@ -5,7 +5,7 @@ From Coq Require Import Program.
 From equivChecker Require Import operators utils pset syntax words semantics derivatives expr_deriv opt_algo bounded_checker.
 Import ListNotations.
 
-(** * { n : nat | n < N} is Instance of Equ and EquDec *)
+(** * { n : nat | n < N} is Instance of [Equ] and [EquDec] *)
 
 #[global]
 Instance nat_fin_equ (N : nat) : Equ ({ n:nat | n < N}).
@@ -291,6 +291,8 @@ Proof.
   - simpl. now rewrite IHBound_Omega, convert_down_regexp_correct.
   - simpl. now rewrite convert_down_regexp_correct.
 Qed.
+
+(** ** Equivalence Checker *)
 
 Definition check (e1 : omega_regexpr nat) (e2 : omega_regexpr nat) :=
   let '(e1, e2) := convert e1 e2 in
