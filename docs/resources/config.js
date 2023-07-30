@@ -52,7 +52,6 @@ coqdocjs.repl = {
     "Gamma": "Γ",
     "Pi": "Π",
     "Sigma": "Σ",
-    "Omega": "Ω",
     "Xi": "Ξ"
 };
 

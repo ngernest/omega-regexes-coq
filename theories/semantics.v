@@ -343,7 +343,7 @@ Section Example.
 Definition E1 := Esum (Echar "a"%string) (Echar "b"%string).
 Definition E2 := OEomega E1.
 
-Example in_E2 `{Equ string}:
+Example in_E2 `{Equ string} :
   omega_lang E2 (fun _ => "a"%string).
 Proof.
   unfold omega_lang. unfold E2. unfold Omega.
@@ -353,6 +353,19 @@ Proof.
     + intros n. simpl. lia.
   - intros n. simpl. left.
     constructor. reflexivity. constructor.
+Qed.
+
+Example a_in_a_ind `{Equ string} :
+  lang_omega_ind (OEomega (Echar "a"%string)) (fun _ => "a"%string).
+Proof.
+  constructor. unfold Omega.
+  exists (fun n => (n, 1))%nat. split.
+    - unfold Chain. repeat split. 
+      + intros n. simpl. lia.
+      + intros n. simpl. lia.
+    - intros n. simpl. constructor. 
+      reflexivity. 
+      constructor.
 Qed.
 
 End Example.
@@ -789,7 +802,7 @@ Proof.
 Qed.
 
 (** Semantics Inclusion *)
-Theorem semantics_equivalence:
+Theorem semantics_inclusion :
   forall A `{Equ A} e (w1 : word A) (w2 : coword A),
     ↑w1 ≃ w2 -> omega_lang e  w1 -> lang_omega_co e w2.
 Proof.
