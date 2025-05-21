@@ -5,7 +5,7 @@ let to_string x =
         match x with 
         | EQUAL -> "equal"
         | NOT_EQUAL _ -> "not equal"
-        | UNKNOWN _ -> "unknow"
+        | UNKNOWN _ -> "unknown"
 
 let equivalence_checker e1 e2 = 
         Printf.printf "%s" (to_string (check e1 e2))

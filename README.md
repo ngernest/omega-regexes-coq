@@ -1,5 +1,11 @@
 # Verified Equivalence Checker for Omega-Regular Expressions
 
+Code adapted from Iona Kuhn's original repo.
+To execute the extracted OCaml equivalence checker, `cd` into the `extraction` folder
+and run `dune exec -- ./test.exe`. 
+
+***
+
 This repository contain the full Coq development of my bachelor thesis.
 
 It is hosted here: https://ioku00001.github.io/bachelor-thesis/toc.html
