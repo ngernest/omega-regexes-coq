@@ -7,12 +7,18 @@ Import ListNotations.
 
 (** * Derivatives of Languages *)
 
+(** [deriv_a] is the derivative of a language [L] over infintie words 
+     with respect to symbol [a] *)
 Definition deriv_a {A : Type} (a : A) (L : pset (coword A)) : pset (coword A) :=
   (fun w => L (lcons a w)).
 
+(** [deriv_a] is the derivative of a language [L] over finite words 
+     with respect to symbol [a] *)
 Definition regular_deriv_a {A : Type} (a : A) (L : pset (finword A)) : pset (finword A) :=
   (fun w => L (cons a w)).
 
+(** [deriv_w] is the word derivative of a language [L] over infinite words 
+    with respect to the finite word [w] *)
 Definition deriv_w {A: Type} (w : finword A) (L : pset (coword A)) : pset (coword A) := 
   (fun w' => L (w • w')).
 
@@ -90,6 +96,7 @@ Qed.
 Reserved Notation "E1 '->Δ' E2" (at level 80).
 Reserved Notation "E1 '->*Δ' E2" (at level 80).
 
+(** An equation is a set of omega-regular expression pairs *)
 Definition Equations A := @pset (omega_regexpr A * omega_regexpr A).
 
 #[global]
@@ -114,6 +121,9 @@ Proof.
 Defined.
 
 (** ** Step of the Algorithm *)
+
+(** [step] represents one step in the declarative algorithm for checking
+    omega-regular expression equivalence *)
 Inductive step {A} `{Equ A} : Equations A -> Equations A -> Prop :=
   | deriv E e1 e2 e1' e2' :
     (forall a, lang_omega_co (e1' a) ≃ deriv_a a (lang_omega_co e1)) ->

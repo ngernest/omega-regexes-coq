@@ -163,9 +163,11 @@ Definition ltail {A} (w : coword A) :=
   | _ :? w => w
   end.
 
-(** Definition bisimular of two cowords: tail the same and first symbol *)
+(** Definition for bisimularity of two cowords: 
+    the tails [xs] and [ys] must be the same
+    and the two cowords must share the same first symbol [x] *)
 CoInductive bisim {A} : coword A -> coword A -> Prop :=
-  | bisim_intro (x : A) xs ys:
+  | bisim_intro (x : A) xs ys :
     bisim xs ys ->
     bisim (lcons x xs) (lcons x ys).
 

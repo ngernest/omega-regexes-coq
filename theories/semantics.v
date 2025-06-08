@@ -381,6 +381,8 @@ End Example.
 
 (** ** Definition Coinductive Semantics *)
 (** also sometimes called colang *)
+
+(** [lang_omega_co e w] means w ∈ L_w^co(e) (Definition 3.16 in the thesis) *)
 CoInductive lang_omega_co {A} `{Equ A} : omega_regexpr A -> coword A -> Prop :=
   | lang_omega_co_sum_l w e1 e2 :
     lang_omega_co e1 w ->
