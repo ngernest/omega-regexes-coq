@@ -215,8 +215,8 @@ Fixpoint slice_aux {A} (w: word A) (i off : nat) : finword A :=
   | S off => (w i)::(slice_aux w (S i) off)
   end.
 
-(** Takes an infinite word and returns a finite word with a given length
-    that starts at a given index 
+(** Takes an infinite word and returns a *slice*, 
+    i.e. finite word with a given length that starts at a given index 
     - `loc` is a pair containing (index, length) *)
 Definition slice {A} (w : word A) (loc : nat * nat) : finword A :=
   slice_aux w (fst loc) (snd loc).
@@ -257,6 +257,9 @@ Definition Chain (f : nat -> (nat * nat)) : Prop :=
     The split is given by a strictly increasing function [f]
     such all sub word [wi] starts at position [fst f(i)] and has length [snd f(i)] 
     [L] membership of the [wi]s is tested by [slice] 
+
+    - Intuitively, [Omega] ensures that every slice of an infinite word is 
+      in the regular language
 *)
 Definition Omega {A} (L : pset (finword A)) (w : word A) : Prop :=
    exists (f : nat -> (nat * nat)),
