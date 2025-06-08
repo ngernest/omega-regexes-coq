@@ -215,7 +215,10 @@ Fixpoint slice_aux {A} (w: word A) (i off : nat) : finword A :=
   | S off => (w i)::(slice_aux w (S i) off)
   end.
 
-Definition slice {A} (w : word A) (loc : nat * nat) :=
+(** Takes an infinite word and returns a finite word with a given length
+    that starts at a given index 
+    - `loc` is a pair containing (index, length) *)
+Definition slice {A} (w : word A) (loc : nat * nat) : finword A :=
   slice_aux w (fst loc) (snd loc).
 
 Theorem slice_assoc {A} :
